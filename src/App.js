@@ -5,8 +5,8 @@ import "./App.css";
 import Banner from "./banner";
 import Header from "./header";
 import Caption from "./caption"
-import PrevButton from "./buttons/PrevButton";
-import Nextbutton from "./buttons/NextButton";
+import ButtonComp from "./ButtonComp";
+
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
 			updateImage(res.data.url);
 			updateTitle(res.data.title);
 			updateCaption(res.data.explanation);
+			console.log(res);
 		})
 		.catch((err) => console.log(err))
 	}, [])
@@ -33,8 +34,8 @@ function App() {
     	<Header title={podTitle} />
     	<Caption text={podCaption} />
     	<div className="buttons">
-    		<PrevButton />
-    		<Nextbutton />
+    		<ButtonComp type="prev" />
+    		<ButtonComp type="next" />
     	</div>
     </div>
   );

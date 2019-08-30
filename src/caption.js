@@ -1,9 +1,15 @@
 import React from "react";
+import styled from 'styled-components';
+
+const Art = styled.p`
+	font-size: 0.7rem;
+
+`
 
 function Caption(props){
 	return (
 		<div> 
-			<p> {props.text}</p>
+			<Art> {props.text} </Art>
 		</div>
 
 
